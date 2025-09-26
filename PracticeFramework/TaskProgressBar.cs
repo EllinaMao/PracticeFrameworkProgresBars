@@ -22,9 +22,6 @@ namespace PracticeFramework
                     action.BeginInvoke(ctx, pb, 10000, null, null);
                 }
 
-                //action.EndInvoke(arr1);
-                //action.EndInvoke(arr2);
-                //action.EndInvoke(arr3);
             }
         }
         private static void SetProgressBar(SynchronizationContext ctx, ProgressBar pb, int count)
