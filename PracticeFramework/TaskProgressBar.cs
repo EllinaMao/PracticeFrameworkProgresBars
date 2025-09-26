@@ -15,14 +15,17 @@ namespace PracticeFramework
         {
             Action<SynchronizationContext, ProgressBar, int> action = SetProgressBar;
 
-            foreach (ProgressBar pb in flow.Controls)
+            foreach (Control ctrl in flow.Controls)
             {
-                var arr = action.BeginInvoke(ctx, pb, 10000, null, null);
-            }
+                if (ctrl is ProgressBar pb)
+                {
+                    action.BeginInvoke(ctx, pb, 10000, null, null);
+                }
 
-            //action.EndInvoke(arr1);
-            //action.EndInvoke(arr2);
-            //action.EndInvoke(arr3);
+                //action.EndInvoke(arr1);
+                //action.EndInvoke(arr2);
+                //action.EndInvoke(arr3);
+            }
         }
         private static void SetProgressBar(SynchronizationContext ctx, ProgressBar pb, int count)
         {
