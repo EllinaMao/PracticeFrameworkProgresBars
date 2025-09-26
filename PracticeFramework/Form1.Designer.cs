@@ -32,15 +32,18 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.createProgressBar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.createProgressBar = new System.Windows.Forms.Button();
+            this.DeletePB = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.DeletePB);
             this.panel1.Controls.Add(this.createProgressBar);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -79,6 +82,16 @@
             this.progressBar1.Size = new System.Drawing.Size(770, 39);
             this.progressBar1.TabIndex = 0;
             // 
+            // createProgressBar
+            // 
+            this.createProgressBar.Location = new System.Drawing.Point(551, 7);
+            this.createProgressBar.Name = "createProgressBar";
+            this.createProgressBar.Size = new System.Drawing.Size(75, 23);
+            this.createProgressBar.TabIndex = 1;
+            this.createProgressBar.Text = "Create";
+            this.createProgressBar.UseVisualStyleBackColor = true;
+            this.createProgressBar.Click += new System.EventHandler(this.createProgressBar_Click);
+            // 
             // progressBar2
             // 
             this.progressBar2.Location = new System.Drawing.Point(3, 48);
@@ -93,15 +106,15 @@
             this.progressBar3.Size = new System.Drawing.Size(770, 39);
             this.progressBar3.TabIndex = 2;
             // 
-            // createProgressBar
+            // DeletePB
             // 
-            this.createProgressBar.Location = new System.Drawing.Point(632, 6);
-            this.createProgressBar.Name = "createProgressBar";
-            this.createProgressBar.Size = new System.Drawing.Size(75, 23);
-            this.createProgressBar.TabIndex = 1;
-            this.createProgressBar.Text = "Create";
-            this.createProgressBar.UseVisualStyleBackColor = true;
-            this.createProgressBar.Click += new System.EventHandler(this.createProgressBar_Click);
+            this.DeletePB.Location = new System.Drawing.Point(632, 6);
+            this.DeletePB.Name = "DeletePB";
+            this.DeletePB.Size = new System.Drawing.Size(75, 23);
+            this.DeletePB.TabIndex = 2;
+            this.DeletePB.Text = "Delete";
+            this.DeletePB.UseVisualStyleBackColor = true;
+            this.DeletePB.Click += new System.EventHandler(this.DeletePB_Click);
             // 
             // Form1
             // 
@@ -124,9 +137,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button createProgressBar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.Button createProgressBar;
+        private System.Windows.Forms.Button DeletePB;
     }
 }
 

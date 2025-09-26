@@ -23,6 +23,10 @@ namespace PracticeFramework
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (flowLayoutPanel1.Controls.Count == 0) {
+                MessageBox.Show("You dont have any Progress bars");
+                return;
+            }
             TaskProgressBar.StartProgressBar(ctx, flowLayoutPanel1);
         }
         private void createProgressBar_Click(object sender, EventArgs e)
@@ -36,6 +40,23 @@ namespace PracticeFramework
                 Value = 0
             };
             flowLayoutPanel1.Controls.Add(pb);
+        }
+
+        private void DeletePB_Click(object sender, EventArgs e)
+        {
+            if (flowLayoutPanel1.Controls.Count > 0)
+            {
+                Control last = flowLayoutPanel1.Controls[flowLayoutPanel1.Controls.Count - 1];
+                if (last is ProgressBar)
+                {
+                    flowLayoutPanel1.Controls.Remove(last);
+                    last.Dispose();
+                }
+            }
+            else
+            {
+                MessageBox.Show("You dont have any Progress bars");
+            }
         }
     }
 }
