@@ -23,7 +23,19 @@ namespace PracticeFramework
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TaskProgressBar.StartProgressBar(ctx, progressBar1, progressBar2, progressBar3);
+            TaskProgressBar.StartProgressBar(ctx, flowLayoutPanel1);
+        }
+        private void createProgressBar_Click(object sender, EventArgs e)
+        {
+            ProgressBar pb = new ProgressBar
+            {
+                Width = 770,
+                Height = 39,
+                Minimum = 0,
+                Maximum = 100,
+                Value = 0
+            };
+            flowLayoutPanel1.Controls.Add(pb);
         }
     }
 }

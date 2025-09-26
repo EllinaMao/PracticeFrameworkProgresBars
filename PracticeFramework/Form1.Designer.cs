@@ -51,6 +51,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.progressBar1);
             this.flowLayoutPanel1.Controls.Add(this.progressBar2);
             this.flowLayoutPanel1.Controls.Add(this.progressBar3);
@@ -59,6 +60,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 417);
             this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // button1
             // 
@@ -99,6 +101,7 @@
             this.createProgressBar.TabIndex = 1;
             this.createProgressBar.Text = "Create";
             this.createProgressBar.UseVisualStyleBackColor = true;
+            this.createProgressBar.Click += new System.EventHandler(this.createProgressBar_Click);
             // 
             // Form1
             // 

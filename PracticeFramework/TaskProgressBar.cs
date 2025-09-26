@@ -11,13 +11,14 @@ namespace PracticeFramework
     public class TaskProgressBar
     {
         private static Random rnd = new Random();
-        public static void StartProgressBar(SynchronizationContext ctx, ProgressBar pb1, ProgressBar pb2, ProgressBar pb3)
+        public static void StartProgressBar(SynchronizationContext ctx, FlowLayoutPanel flow)
         {
             Action<SynchronizationContext, ProgressBar, int> action = SetProgressBar;
-            var arr1 = action.BeginInvoke(ctx, pb1, 10000, null, null);
-            var arr2 = action.BeginInvoke(ctx, pb2, 10000, null, null);
-            var arr3 = action.BeginInvoke(ctx, pb3, 10000, null, null);
 
+            foreach (ProgressBar pb in flow.Controls)
+            {
+                var arr = action.BeginInvoke(ctx, pb, 10000, null, null);
+            }
 
             //action.EndInvoke(arr1);
             //action.EndInvoke(arr2);
