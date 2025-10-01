@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*Use BeginInvoke, Or Threads, Or ThreadPool WPF Or WinForms
+*/
 namespace PracticeFramework
 {
     public partial class Form1 : Form
@@ -25,7 +26,6 @@ namespace PracticeFramework
         {
             if (flowLayoutPanel1.Controls.Count == 0) {
                 MessageBox.Show("You dont have any Progress bars");
-                return;
             }
             TaskProgressBar.StartProgressBar(ctx, flowLayoutPanel1);
         }

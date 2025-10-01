@@ -6,7 +6,6 @@ namespace PracticeFramework
 {
     public class TaskProgressBar
     {
-        private static Random rnd = new Random();
         public static void StartProgressBar(SynchronizationContext ctx, FlowLayoutPanel flow)
         {
             Action<SynchronizationContext, ProgressBar, int> action = SetProgressBar;
@@ -28,6 +27,7 @@ namespace PracticeFramework
             {
                 lock (ctx)
                 {
+                    Random rnd = new Random();
                     number = rnd.Next(0, 100);
                     ctx.Send(s => pb.Value = number, null);
                     Thread.Sleep(100);
