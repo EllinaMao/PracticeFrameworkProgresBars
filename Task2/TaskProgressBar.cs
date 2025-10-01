@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Windows.Forms;
+using Task2;
 
 namespace PracticeFramework
 {
@@ -9,6 +10,8 @@ namespace PracticeFramework
     {
         private static CancellationTokenSource cts;
         private static List<string> finishOrder = new List<string>();
+        public static event EventHandler<EventEventArgs> finish;
+        private static readonly Random rnd = new Random(); // один общий Random
 
         public static void StartProgressBar(SynchronizationContext ctx, TableLayoutPanel tb)
         {
@@ -32,38 +35,42 @@ namespace PracticeFramework
         {
             int number = 0;
 
-            while (number < max && cts.Token.IsCancellationRequested != true)
+            while (number < max && !cts.Token.IsCancellationRequested)
             {
-                lock(cts){
+                number += rnd.Next(1, 20);
+                if (number > max) number = max;
 
-                    Random rnd = new Random();
-                    number += rnd.Next(1, 20);
-                    if (number > max)
-                    {
-                        number = max;
-                    }
-                    ctx.Send(s => pb.Value = number, null);
-                    Thread.Sleep(100);
+                ctx.Send(_ => pb.Value = number, null);
+                Thread.Sleep(1000);
+
+                if (number >= max)
+                {
+                    WinCheck(ctx, pb);
                 }
-
-                WinCheck(ctx, pb, number, max);
-                
-
             }
-
         }
 
-        private static void WinCheck(SynchronizationContext ctx, ProgressBar pb, int number, int max)
+        private static void WinCheck(SynchronizationContext ctx, ProgressBar pb)
         {
-            if (number >= max && cts.Token.IsCancellationRequested != true)
+            lock (finishOrder)
             {
-                lock (cts)
+                string horseName = pb.Tag?.ToString() ?? pb.Name;
+
+                if (!finishOrder.Contains(horseName)) // чтобы не было дублей
                 {
-                    finishOrder.Add(pb.Name);
-                    cts.Cancel();
-                    ctx.Send(message => MessageBox.Show($"{pb.Name} победил!"), null);
+                    finishOrder.Add(horseName);
+                    int place = finishOrder.Count;
+
+                    // Отправляем событие наружу (для DataGridView)
+                    finish?.Invoke(null, new EventEventArgs(horseName, place));
+
+                    // Если все добежали — показываем победителя
+                    if (finishOrder.Count == 5)
+                    {
+                        ctx.Send(_ => MessageBox.Show($"{finishOrder[0]} победил!"), null);
+                        StopRace();
+                    }
                 }
-                    StopRace();
             }
         }
 

@@ -43,7 +43,7 @@
             this.Horse2 = new System.Windows.Forms.ProgressBar();
             this.Horse3 = new System.Windows.Forms.ProgressBar();
             this.Horse4 = new System.Windows.Forms.ProgressBar();
-            this.Horse6 = new System.Windows.Forms.ProgressBar();
+            this.Horse5 = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -96,7 +96,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Запустить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -115,7 +115,7 @@
             this.tableLayoutPanel1.Controls.Add(this.Horse2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.Horse3, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.Horse4, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.Horse6, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.Horse5, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 2, 2);
@@ -190,6 +190,7 @@
             this.Horse1.Name = "Horse1";
             this.Horse1.Size = new System.Drawing.Size(486, 62);
             this.Horse1.TabIndex = 5;
+            this.Horse1.Tag = "Конь 1";
             // 
             // Horse2
             // 
@@ -198,6 +199,7 @@
             this.Horse2.Name = "Horse2";
             this.Horse2.Size = new System.Drawing.Size(486, 62);
             this.Horse2.TabIndex = 6;
+            this.Horse2.Tag = "Конь 2";
             // 
             // Horse3
             // 
@@ -206,6 +208,7 @@
             this.Horse3.Name = "Horse3";
             this.Horse3.Size = new System.Drawing.Size(486, 62);
             this.Horse3.TabIndex = 7;
+            this.Horse3.Tag = "Конь 3";
             // 
             // Horse4
             // 
@@ -214,14 +217,16 @@
             this.Horse4.Name = "Horse4";
             this.Horse4.Size = new System.Drawing.Size(486, 62);
             this.Horse4.TabIndex = 8;
+            this.Horse4.Tag = "Конь 4";
             // 
-            // Horse6
+            // Horse5
             // 
-            this.Horse6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Horse6.Location = new System.Drawing.Point(87, 275);
-            this.Horse6.Name = "Horse6";
-            this.Horse6.Size = new System.Drawing.Size(486, 64);
-            this.Horse6.TabIndex = 9;
+            this.Horse5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Horse5.Location = new System.Drawing.Point(87, 275);
+            this.Horse5.Name = "Horse5";
+            this.Horse5.Size = new System.Drawing.Size(486, 64);
+            this.Horse5.TabIndex = 9;
+            this.Horse5.Tag = "Конь 5";
             // 
             // pictureBox1
             // 
@@ -349,7 +354,7 @@
         private System.Windows.Forms.ProgressBar Horse2;
         private System.Windows.Forms.ProgressBar Horse3;
         private System.Windows.Forms.ProgressBar Horse4;
-        private System.Windows.Forms.ProgressBar Horse6;
+        private System.Windows.Forms.ProgressBar Horse5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
