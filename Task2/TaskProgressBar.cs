@@ -61,7 +61,7 @@ namespace PracticeFramework
                     finishOrder.Add(horseName);
                     int place = finishOrder.Count;
 
-                    // Отправляем событие наружу (для DataGridView)
+                    // Отправляем событие наружу 
                     finish?.Invoke(null, new EventEventArgs(horseName, place));
 
                     // Если все добежали — показываем победителя
