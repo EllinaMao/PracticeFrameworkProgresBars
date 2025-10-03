@@ -17,8 +17,7 @@ namespace FormMain
         {
             /*QueueUserWorkItem<TState>(Action<TState>, TState, Boolean)	
              *Помещает метод, определенный делегатом Action<T>, в очередь на выполнение и указывает данные для этого метода. Метод выполняется, когда становится доступен поток из пула потоков.
-            https://learn.microsoft.com/ru-ru/dotnet/api/system.threading.threadpool?view=net-8.0
-            
+            https://learn.microsoft.com/ru-ru/dotnet/api/system.threading.threadpool?view=net-8.0      
             господи как я замучалась
             */
             ThreadPool.QueueUserWorkItem(_ =>

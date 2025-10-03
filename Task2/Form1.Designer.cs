@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(809, 54);
+            this.panel1.Size = new System.Drawing.Size(913, 54);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -87,7 +87,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 396);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(809, 54);
+            this.panel2.Size = new System.Drawing.Size(913, 54);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -105,7 +105,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.625F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.375F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
@@ -188,7 +188,7 @@
             this.Horse1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Horse1.Location = new System.Drawing.Point(87, 3);
             this.Horse1.Name = "Horse1";
-            this.Horse1.Size = new System.Drawing.Size(486, 62);
+            this.Horse1.Size = new System.Drawing.Size(485, 62);
             this.Horse1.TabIndex = 5;
             this.Horse1.Tag = "Конь 1";
             // 
@@ -197,7 +197,7 @@
             this.Horse2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Horse2.Location = new System.Drawing.Point(87, 71);
             this.Horse2.Name = "Horse2";
-            this.Horse2.Size = new System.Drawing.Size(486, 62);
+            this.Horse2.Size = new System.Drawing.Size(485, 62);
             this.Horse2.TabIndex = 6;
             this.Horse2.Tag = "Конь 2";
             // 
@@ -206,7 +206,7 @@
             this.Horse3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Horse3.Location = new System.Drawing.Point(87, 139);
             this.Horse3.Name = "Horse3";
-            this.Horse3.Size = new System.Drawing.Size(486, 62);
+            this.Horse3.Size = new System.Drawing.Size(485, 62);
             this.Horse3.TabIndex = 7;
             this.Horse3.Tag = "Конь 3";
             // 
@@ -215,7 +215,7 @@
             this.Horse4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Horse4.Location = new System.Drawing.Point(87, 207);
             this.Horse4.Name = "Horse4";
-            this.Horse4.Size = new System.Drawing.Size(486, 62);
+            this.Horse4.Size = new System.Drawing.Size(485, 62);
             this.Horse4.TabIndex = 8;
             this.Horse4.Tag = "Конь 4";
             // 
@@ -224,7 +224,7 @@
             this.Horse5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Horse5.Location = new System.Drawing.Point(87, 275);
             this.Horse5.Name = "Horse5";
-            this.Horse5.Size = new System.Drawing.Size(486, 64);
+            this.Horse5.Size = new System.Drawing.Size(485, 64);
             this.Horse5.TabIndex = 9;
             this.Horse5.Tag = "Конь 5";
             // 
@@ -234,9 +234,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(579, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(578, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 62);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
@@ -246,9 +246,9 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(579, 71);
+            this.pictureBox2.Location = new System.Drawing.Point(578, 71);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(48, 62);
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
@@ -258,9 +258,9 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(579, 139);
+            this.pictureBox3.Location = new System.Drawing.Point(578, 139);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(48, 62);
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
@@ -270,9 +270,9 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.InitialImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(579, 207);
+            this.pictureBox4.Location = new System.Drawing.Point(578, 207);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(47, 62);
+            this.pictureBox4.Size = new System.Drawing.Size(48, 62);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             // 
@@ -282,9 +282,9 @@
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.InitialImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(579, 275);
+            this.pictureBox5.Location = new System.Drawing.Point(578, 275);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(47, 64);
+            this.pictureBox5.Size = new System.Drawing.Size(48, 64);
             this.pictureBox5.TabIndex = 14;
             this.pictureBox5.TabStop = false;
             // 
@@ -296,7 +296,7 @@
             this.resultBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.resultBox.Location = new System.Drawing.Point(629, 54);
             this.resultBox.Name = "resultBox";
-            this.resultBox.Size = new System.Drawing.Size(180, 342);
+            this.resultBox.Size = new System.Drawing.Size(284, 342);
             this.resultBox.TabIndex = 4;
             this.resultBox.TabStop = false;
             this.resultBox.Text = "Результаты";
@@ -307,14 +307,14 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(174, 323);
+            this.dataGridView1.Size = new System.Drawing.Size(278, 323);
             this.dataGridView1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 450);
+            this.ClientSize = new System.Drawing.Size(913, 450);
             this.Controls.Add(this.resultBox);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);

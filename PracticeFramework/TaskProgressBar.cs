@@ -30,7 +30,7 @@ namespace PracticeFramework
 
                     number = rnd.Next(0, 100);
                     ctx.Send(s => pb.Value = number, null);
-                    Thread.Sleep(10000);
+                    Thread.Sleep(100);
 
 
             }
