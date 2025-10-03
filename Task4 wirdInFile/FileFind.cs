@@ -12,14 +12,9 @@ namespace Task4_wirdInFile
 {
     public static class FileFind
     {
-        //static string testword = "Створіть";
-        //static string testpath = "D:\\lessons\\СисПрограмирование\\PracticeFramework\\Task4 wirdInFile\\TextFile1.txt";
-        //static string testpath2 = "D:\\lessons\\СисПрограмирование\\PracticeFramework";
-
         public static void FindCountWord(SynchronizationContext ctx, string word, string path, Label label)
         {
-            //path = testpath;
-            //word = testword;
+
             Action<SynchronizationContext, int, Label> action = UiUpdate;
             Action<SynchronizationContext, Label, string> action2 = UiUpdate;
             ThreadPool.QueueUserWorkItem(th =>
@@ -74,9 +69,9 @@ namespace Task4_wirdInFile
         }
         public static void CountWordInDirectory(SynchronizationContext ctx, string directoryPath, string word, DataGridView dataGrid)
         {
-            //Action<SynchronizationContext, string, string, int, DataGridView> action = UiUpdate;
-            //directoryPath = testpath2;
-            //word = testword;
+            Action<SynchronizationContext, string, string, int, DataGridView> action = UiUpdate;
+            Action<SynchronizationContext, string> error = UiUpdate;
+
             var files = Directory.GetFiles(directoryPath, "*", SearchOption.AllDirectories);
             foreach (var file in files)
             {
@@ -96,6 +91,7 @@ namespace Task4_wirdInFile
                 }
                 catch (Exception ex)
                 {
+                    error.BeginInvoke(ctx, ex.Message, null, null);
                 }
             }
 
@@ -122,6 +118,13 @@ namespace Task4_wirdInFile
                 DG.Rows.Add(fileName, filePath, count);
             }, null);
 
+        }
+        private static void UiUpdate(SynchronizationContext ctx, string message)
+        {
+            ctx.Post(_ =>
+            {
+                MessageBox.Show(message, "Error", MessageBoxButtons.OK);
+            }, null);
         }
 
 
