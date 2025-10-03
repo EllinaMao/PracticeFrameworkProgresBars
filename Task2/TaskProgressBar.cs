@@ -41,7 +41,7 @@ namespace PracticeFramework
                 if (number > max) number = max;
 
                 ctx.Send(_ => pb.Value = number, null);
-                Thread.Sleep(1000);
+                Thread.Sleep(10000);
 
                 if (number >= max)
                 {
