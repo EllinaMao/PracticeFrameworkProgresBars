@@ -71,8 +71,9 @@ namespace Task4_wirdInFile
         {
             Action<SynchronizationContext, string, string, int, DataGridView> action = UiUpdate;
             Action<SynchronizationContext, string> error = UiUpdate;
-
-            var files = Directory.GetFiles(directoryPath, "*", SearchOption.AllDirectories);
+            ThreadPool.QueueUserWorkItem(th =>
+            {
+                var files = Directory.GetFiles(directoryPath, "*", SearchOption.AllDirectories);
             foreach (var file in files)
             {
                 try
@@ -93,7 +94,9 @@ namespace Task4_wirdInFile
                 {
                     error.BeginInvoke(ctx, ex.Message, null, null);
                 }
-            }
+
+                }
+            });
 
         }
         private static void UiUpdate(SynchronizationContext ctx, int count, Label label)
@@ -102,6 +105,7 @@ namespace Task4_wirdInFile
             {
                 label.Text = $"{count}";
             }, null);
+            Thread.Sleep(500);
 
         }
         private static void UiUpdate(SynchronizationContext ctx, Label label, string message)
@@ -110,6 +114,8 @@ namespace Task4_wirdInFile
             {
                 label.Text = message;
             }, null);
+            Thread.Sleep(500);
+
         }
         private static void UiUpdate(SynchronizationContext ctx, string fileName, string filePath, int count, DataGridView DG)
         {
@@ -117,6 +123,8 @@ namespace Task4_wirdInFile
             {
                 DG.Rows.Add(fileName, filePath, count);
             }, null);
+            Thread.Sleep(500);
+
 
         }
         private static void UiUpdate(SynchronizationContext ctx, string message)
@@ -125,6 +133,8 @@ namespace Task4_wirdInFile
             {
                 MessageBox.Show(message, "Error", MessageBoxButtons.OK);
             }, null);
+            Thread.Sleep(500);
+
         }
 
 

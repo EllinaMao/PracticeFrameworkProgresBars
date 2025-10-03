@@ -30,10 +30,18 @@ namespace Task5_All_files
         }
         private void buttonFind_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             string folderPath = textBoxPath.Text;
             string word = textBoxWord.Text;
             RefreshDataGrid(sender, e);
             FileFind.CountWordInDirectory(ctx, folderPath, word, dataGridView1);
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK);
+            }
 
 
 
